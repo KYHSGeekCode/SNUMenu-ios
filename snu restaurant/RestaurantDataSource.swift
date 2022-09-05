@@ -8,6 +8,6 @@
 import Foundation
 
 protocol RestaurantDataSource {
-    func fetchMenus() async throws -> [Menu]?
+    func fetchMenus(of: Date) async throws -> [Menu]?
     func fetchRestaurants() async throws -> [Restaurant]?
 }

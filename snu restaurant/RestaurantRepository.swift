@@ -16,7 +16,7 @@ class RestaurantRepository {
         self.localRestaurantDataSource = localRestaurantDataSource
     }
 
-    func getMenus() async throws -> [Menu]? {
-        return try await networkRestaurantDataSource.fetchMenus()
+    func getMenus(of: Date) async throws -> [Menu]? {
+        return try await networkRestaurantDataSource.fetchMenus(of: of)
     }
 }

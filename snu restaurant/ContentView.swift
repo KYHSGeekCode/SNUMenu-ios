@@ -33,17 +33,17 @@ struct ContentView: View {
             }
                 .navigationBarItems(
                 leading: Button(action: {
-
+                    viewModel.yesterday()
                 }, label: {
                     Image(systemName: "arrow.left")
                 }),
                 trailing: Button(action: {
-
+                    viewModel.tomorrow()
                 }, label: {
                     Image(systemName: "arrow.right")
                 })
             )
-                .navigationTitle("Today")
+                .navigationTitle("\(viewModel.date, formatter: DateFormatter.day)")
         }.onAppear {
             viewModel.refreshData()
         }
@@ -77,4 +77,12 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
+}
+
+extension DateFormatter {
+    static let day: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter
+    }()
 }

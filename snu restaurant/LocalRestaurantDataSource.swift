@@ -8,7 +8,7 @@
 import Foundation
 
 class LocalRestaurantDataSource: RestaurantDataSource {
-    func fetchMenus() async throws -> [Menu]? {
+    func fetchMenus(of: Date) async throws -> [Menu]? {
         return nil
     }
 

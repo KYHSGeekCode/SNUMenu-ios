@@ -88,14 +88,15 @@ class NetworkRestaurantDataSource: RestaurantDataSource {
         return restaurants.content
     }
 
-    func fetchMenus() async throws -> [Menu]? {
+    func fetchMenus(of: Date) async throws -> [Menu]? {
         let parameters: [String: Any] = [
             "requestUrl": "http://mob.snu.ac.kr/mob/mcin/mfood/todayFood.html",
             "requestUri": "/mob/mcin/mfood/todayFood.html",
             "ssoCheckYn": "Y",
             "authUrl": "/mob/mcin/mfood/todayFood.html"
         ]
-        let request = AF.request("https://mob.snu.ac.kr/api/findRestMenuList.action?date=2020-07-27", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        let date = DateFormatter.day.string(from: of)
+        let request = AF.request("https://mob.snu.ac.kr/api/findRestMenuList.action?date=\(date)", method: .post, parameters: parameters, encoding: JSONEncoding.default)
 
         let task = request.serializingDecodable(MenuList.self)
         let response = await task.response
