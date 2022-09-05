@@ -58,7 +58,7 @@ struct Menu: Decodable, Hashable {
     let code, restaurant: String
     let gubun, tel, locationEng, editDate: String?
     let menuDate: String?
-    let breakfast, lunch, dinner: String
+    let breakfast, lunch, dinner: String?
 
     enum CodingKeys: String, CodingKey {
         case ptalUserID = "ptalUserId"

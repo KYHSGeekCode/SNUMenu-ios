@@ -23,13 +23,15 @@ struct ContentView: View {
             List {
                 ForEach(viewModel.menus, id: \.self) { menu in
                     NavigationLink {
-                        Text("Item at \(menu.restaurant)")
+                        Text(menu.breakfast ?? "아침 없음")
+                        Text(menu.lunch ?? "점심 없음")
+                        Text(menu.dinner ?? "저녁 없음")
                     } label: {
-                        Text("Item at \(menu.restaurant)")
+                        Text("\(menu.restaurant)")
                     }
                 }
             }
-            .navigationBarItems(
+                .navigationBarItems(
                 leading: Button(action: {
 
                 }, label: {
@@ -41,7 +43,7 @@ struct ContentView: View {
                     Image(systemName: "arrow.right")
                 })
             )
-            .navigationTitle("Today")
+                .navigationTitle("Today")
         }.onAppear {
             viewModel.refreshData()
         }
