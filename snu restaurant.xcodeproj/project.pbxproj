@@ -13,6 +13,13 @@
 		466A511F28C5BD540058165C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 466A511E28C5BD540058165C /* Preview Assets.xcassets */; };
 		466A512128C5BD540058165C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466A512028C5BD540058165C /* Persistence.swift */; };
 		466A512428C5BD540058165C /* snu_restaurant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 466A512228C5BD540058165C /* snu_restaurant.xcdatamodeld */; };
+		466A512B28C5BE0D0058165C /* RestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466A512A28C5BE0D0058165C /* RestaurantRepository.swift */; };
+		466A512D28C5BE680058165C /* NetworkRestaurantDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466A512C28C5BE680058165C /* NetworkRestaurantDataSource.swift */; };
+		466A513028C5C0E00058165C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 466A512F28C5C0E00058165C /* Alamofire */; };
+		466A513228C5C91D0058165C /* RestaurantDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466A513128C5C91D0058165C /* RestaurantDataSource.swift */; };
+		466A513428C5CC540058165C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466A513328C5CC540058165C /* MainViewModel.swift */; };
+		466A513628C5D1BA0058165C /* LocalRestaurantDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466A513528C5D1BA0058165C /* LocalRestaurantDataSource.swift */; };
+		466A513928C5D4630058165C /* AlamofireNetworkActivityLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 466A513828C5D4630058165C /* AlamofireNetworkActivityLogger */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +30,11 @@
 		466A511E28C5BD540058165C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		466A512028C5BD540058165C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		466A512328C5BD540058165C /* snu_restaurant.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = snu_restaurant.xcdatamodel; sourceTree = "<group>"; };
+		466A512A28C5BE0D0058165C /* RestaurantRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantRepository.swift; sourceTree = "<group>"; };
+		466A512C28C5BE680058165C /* NetworkRestaurantDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRestaurantDataSource.swift; sourceTree = "<group>"; };
+		466A513128C5C91D0058165C /* RestaurantDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDataSource.swift; sourceTree = "<group>"; };
+		466A513328C5CC540058165C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		466A513528C5D1BA0058165C /* LocalRestaurantDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRestaurantDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				466A513028C5C0E00058165C /* Alamofire in Frameworks */,
+				466A513928C5D4630058165C /* AlamofireNetworkActivityLogger in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +75,11 @@
 				466A512028C5BD540058165C /* Persistence.swift */,
 				466A512228C5BD540058165C /* snu_restaurant.xcdatamodeld */,
 				466A511D28C5BD540058165C /* Preview Content */,
+				466A512A28C5BE0D0058165C /* RestaurantRepository.swift */,
+				466A512C28C5BE680058165C /* NetworkRestaurantDataSource.swift */,
+				466A513128C5C91D0058165C /* RestaurantDataSource.swift */,
+				466A513328C5CC540058165C /* MainViewModel.swift */,
+				466A513528C5D1BA0058165C /* LocalRestaurantDataSource.swift */,
 			);
 			path = "snu restaurant";
 			sourceTree = "<group>";
@@ -89,6 +108,10 @@
 			dependencies = (
 			);
 			name = "snu restaurant";
+			packageProductDependencies = (
+				466A512F28C5C0E00058165C /* Alamofire */,
+				466A513828C5D4630058165C /* AlamofireNetworkActivityLogger */,
+			);
 			productName = "snu restaurant";
 			productReference = 466A511428C5BD520058165C /* snu restaurant.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +140,10 @@
 				Base,
 			);
 			mainGroup = 466A510B28C5BD510058165C;
+			packageReferences = (
+				466A512E28C5C0E00058165C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				466A513728C5D4630058165C /* XCRemoteSwiftPackageReference "AlamofireNetworkActivityLogger" */,
+			);
 			productRefGroup = 466A511528C5BD520058165C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -143,10 +170,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				466A512D28C5BE680058165C /* NetworkRestaurantDataSource.swift in Sources */,
+				466A513228C5C91D0058165C /* RestaurantDataSource.swift in Sources */,
 				466A512128C5BD540058165C /* Persistence.swift in Sources */,
 				466A512428C5BD540058165C /* snu_restaurant.xcdatamodeld in Sources */,
+				466A512B28C5BE0D0058165C /* RestaurantRepository.swift in Sources */,
+				466A513628C5D1BA0058165C /* LocalRestaurantDataSource.swift in Sources */,
 				466A511A28C5BD520058165C /* ContentView.swift in Sources */,
 				466A511828C5BD520058165C /* snu_restaurantApp.swift in Sources */,
+				466A513428C5CC540058165C /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +379,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		466A512E28C5C0E00058165C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		466A513728C5D4630058165C /* XCRemoteSwiftPackageReference "AlamofireNetworkActivityLogger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/konkab/AlamofireNetworkActivityLogger";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		466A512F28C5C0E00058165C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 466A512E28C5C0E00058165C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		466A513828C5D4630058165C /* AlamofireNetworkActivityLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 466A513728C5D4630058165C /* XCRemoteSwiftPackageReference "AlamofireNetworkActivityLogger" */;
+			productName = AlamofireNetworkActivityLogger;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		466A512228C5BD540058165C /* snu_restaurant.xcdatamodeld */ = {

@@ -6,10 +6,18 @@
 //
 
 import SwiftUI
+import AlamofireNetworkActivityLogger
 
 @main
 struct snu_restaurantApp: App {
     let persistenceController = PersistenceController.shared
+
+    init() {
+        #if DEBUG
+            NetworkActivityLogger.shared.level = .debug
+            NetworkActivityLogger.shared.startLogging()
+        #endif
+    }
 
     var body: some Scene {
         WindowGroup {
